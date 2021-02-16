@@ -1,0 +1,10 @@
+<h3>Lecture</h3>
+
+<%=@lecture.title %><br>
+<%=@lecture.description %><br>
+
+
+<%= link_to 'add text content', new_lecture_text_path(@lecture)%>
+
+<br>
+<%= link_to 'Back', lectures_path %>

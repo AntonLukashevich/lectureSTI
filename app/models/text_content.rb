@@ -1,0 +1,3 @@
+class TextContent < LectureBlock
+
+end

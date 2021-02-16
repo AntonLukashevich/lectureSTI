@@ -1,0 +1,2 @@
+class ImageContent < LectureBlock
+end

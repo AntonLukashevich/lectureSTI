@@ -1,0 +1,2 @@
+class VideoContent < LectureBlock
+end

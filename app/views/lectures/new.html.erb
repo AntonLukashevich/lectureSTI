@@ -1,0 +1,18 @@
+<h3>New lecture</h3>
+
+<%= form_for @lecture do |f| %>
+  <div>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+
+<%end %>
