@@ -1,9 +1,7 @@
 class LectureBlock < ApplicationRecord
-  belongs_to :lecture
+  #belongs_to :lecture
 
-  scope :texts, -> {where(type: 'TextContent')}
-  scope :images, -> {where(type: 'ImageContent')}
-  scope :videos, -> {where(type: 'VideoContent')}
-
-
+  scope :text_contents, -> { where(type: 'TextContent') }
+  scope :image_contents, -> { where(type: 'ImageContent') }
+  scope :video_contents, -> { where(type: 'VideoContent') }
 end

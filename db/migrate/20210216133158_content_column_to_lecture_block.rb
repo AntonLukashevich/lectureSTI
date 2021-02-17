@@ -1,5 +1,4 @@
-class AddContentColumnsToLectureBlocks < ActiveRecord::Migration[6.1]
-
+class ContentColumnToLectureBlock < ActiveRecord::Migration[6.1]
   def up
     add_column :lecture_blocks, :text_content, :text
     add_column :lecture_blocks, :image_content, :string

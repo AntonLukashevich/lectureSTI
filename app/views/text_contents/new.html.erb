@@ -1,1 +1,17 @@
 <h1>New TextContent</h1>
+
+<%= form_with(model: [@lecture, @lecture.text_contents.build]) do |f| %>
+    <div>
+      <%= f.label :Title %>
+      <%= f.text_field :title %>
+    </div>
+  <div class="form-group">
+    <%= f.label :Text %><br>
+    <%= f.trix_editor :text_content, required: true, autofocus: true, class: 'editor' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
+
