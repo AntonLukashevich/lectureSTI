@@ -41,7 +41,7 @@ class LecturesController < ApplicationController
   private
 
   def lecture_params
-    params.require(:lecture).permit(:title, :description)
+    params.require(:lecture).permit(:title, :description, :content)
   end
 
   def set_lecture

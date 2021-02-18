@@ -3,18 +3,14 @@
 <%= link_to 'add text content', new_lecture_text_content_path(@lecture) %><br>
 <%= link_to 'add image content', new_lecture_image_path(@lecture)%><br>
 
-
-
 <br>
 Title:<%=@lecture.title %><br>
 Description:<%=@lecture.description %><br>
-
+Content<%= @lecture.content %><br>
 <hr>
 <table>
 <% @lecture.text_contents.each do |text| %>
-
     <tr>
-
       <td>
           <%= text.title %> | <%=link_to "Show", lecture_text_content_path(text) %><br>
       </td>
@@ -28,8 +24,5 @@ Description:<%=@lecture.description %><br>
 
 <% end %>
 </table>
-
-
-
 <br>
 <%= link_to 'Back', lectures_path %>

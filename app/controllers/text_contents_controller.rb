@@ -13,6 +13,7 @@ class TextContentsController < ApplicationController
   end
 
   def show
+
   end
 
   def edit
@@ -50,6 +51,7 @@ class TextContentsController < ApplicationController
   end
 
   def set_text
+    #byebug
     @lecture = Lecture.find(params[:lecture_id])
     @text_content = @lecture.text_contents.find(params[:id])
   end
