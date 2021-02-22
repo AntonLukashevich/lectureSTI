@@ -1,0 +1,20 @@
+<%= form_with(model: @lecture_block, url: [@lecture, @lecture_block]) do |f| %>
+  <div>
+    <%= f.label :Title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :order %>
+    <%= f.text_field :order %>
+  </div>
+
+  <div >
+    <%= f.label :Content %><br>
+    <%= f.rich_text_area :content %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

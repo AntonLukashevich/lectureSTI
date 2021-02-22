@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'lectures/index'
 
   resources :lectures do
-    #resources :lecture_blocks
+    resources :lecture_blocks
     resources :text_contents, controller: :text_contents, type: 'TextContent'
     resources :images, controller: :video_contents, type: 'ImageContent'
     #resources :videos, controller: :lecture_blocks, type: 'VideoContent'

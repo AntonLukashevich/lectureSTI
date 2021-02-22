@@ -35,6 +35,7 @@ gem 'trix-rails', require: 'trix'
 gem 'yt', '~> 0.13.7'
 gem 'rails-observers'
 gem 'omniauth-google-oauth2'
+gem 'pry-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

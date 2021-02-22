@@ -1,28 +1,31 @@
-<h3>Lecture</h3>
+<h3><%=@lecture.title %></h3>
 
-<%= link_to 'add text content', new_lecture_text_content_path(@lecture) %><br>
-<%= link_to 'add image content', new_lecture_image_path(@lecture)%><br>
+<%= link_to 'new Lecture_block', new_lecture_lecture_block_path(@lecture) %><br>
 
 <br>
 Title:<%=@lecture.title %><br>
 Description:<%=@lecture.description %><br>
-Content<%= @lecture.content %><br>
+<!--Content<%#= @lecture.content %><br>-->
 <hr>
 <table>
-<% @lecture.text_contents.each do |text| %>
+<% @lecture.lecture_blocks.each do |block| %>
     <tr>
       <td>
-          <%= text.title %> | <%=link_to "Show", lecture_text_content_path(text) %><br>
+          <%= block.title %> | <%= block.order %> | <%=link_to "Show", lecture_lecture_block_path(@lecture,block) %>
+        | <%= link_to "Edit", edit_lecture_lecture_block_path(@lecture, block) %>
+        | <%= link_to "Destroy", lecture_lecture_block_path( block), method: :delete,
+                  data: { confirm: "Are you sure?" } %><br>
       </td>
     </tr>
     <tr>
       <td>
-        <%= text.text_content.html_safe %><br>
+<!--        <%#= block.content%><br>-->
         <hr>
       </td>
     </tr>
 
 <% end %>
+  <%binding.pry %>
 </table>
 <br>
 <%= link_to 'Back', lectures_path %>
